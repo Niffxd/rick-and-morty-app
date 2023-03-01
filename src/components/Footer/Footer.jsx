@@ -7,7 +7,7 @@ export default function Footer () {
     {
       name: 'Instagram',
       image: 'https://cdn-icons-png.flaticon.com/512/3955/3955024.png',
-      link: 'https://www.linkedin.com/in/nirsanchez/',
+      link: 'https://www.instagram.com/nicosanchez2497',
     },
     {
       name: 'GitHub',
