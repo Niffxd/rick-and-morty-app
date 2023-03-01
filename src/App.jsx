@@ -43,7 +43,7 @@ function App() {
         {/* <Route exact path='/characters/:id' element={<Details />}/> */}
         <Route exact path='/locations' element={<Locations loading={loading}/>}/>
         <Route exact path='/episodes' element={<Episodes loading={loading}/>}/>
-        <Route exact path='/about-me' element={<About loading={loading}/>}/>
+        <Route exact path='/about-me' element={<NotFound loading={loading}/>}/>
         <Route exact path='*' element={<NotFound />}/>
       </Routes>
       <Footer/>
