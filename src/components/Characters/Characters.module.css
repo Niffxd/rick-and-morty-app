@@ -3,14 +3,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem 1.5rem;
 }
 
 .container h1 {
   align-self: start;
-  justify-self: flex-start;
   margin-bottom: 1rem;
 }
 

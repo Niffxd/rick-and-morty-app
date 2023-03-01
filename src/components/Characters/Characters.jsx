@@ -5,7 +5,7 @@ import style from './Characters.module.css'
 export default function Characters ({loading}) {
   const [ characters, setCharacters ] = useState([])
   const [ loader, setLoader ] = useState(
-    <img src={loading} alt='loader' width={64}/>
+    <img src={loading} alt='loader' width={96} style={{margin: '5rem 2rem'}}/>
   )
   const [ page, setPage ] = useState(1)
 
@@ -24,7 +24,7 @@ export default function Characters ({loading}) {
     getData(1)
     setTimeout(() => {
       setLoader(
-        <h1>Characters not found 😵‍💫</h1>
+        <h2 style={{margin: '5rem 2rem', textAlign: 'center'}}>Something went wrong 😵‍💫</h2>
       )
     },5000)
   }, [])
@@ -43,7 +43,7 @@ export default function Characters ({loading}) {
               }
               <button>{page}</button>
               {
-                page < 42
+                page < characters.info.pages
                 ? <button onClick={() => handlerNavigation(page+1)}>{'>'}</button>
                 : ''
               }
@@ -78,7 +78,7 @@ export default function Characters ({loading}) {
               }
               <button>{page}</button>
               {
-                page < 42
+                page < characters.info.pages
                   ? <button onClick={() => handlerNavigation(page+1)}>{'>'}</button>
                   : ''
               }
