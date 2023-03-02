@@ -17,6 +17,7 @@ export default function Characters ({loading}) {
   }
 
   useEffect(() => {
+    window.scroll(0, 0)
     getData(id)
     setTimeout(() => {
       setLoader(

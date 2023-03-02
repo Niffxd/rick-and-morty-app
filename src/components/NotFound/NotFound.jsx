@@ -1,7 +1,12 @@
+import { useEffect } from 'react'
 import NotFoundImage from './../../assets/images/notFound.png'
 import style from './NotFound.module.css'
 
 export default function NotFound () {
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, [])
+
   return(
     <div className={style['container']}>
       <h3>Error 404: Page not found</h3>

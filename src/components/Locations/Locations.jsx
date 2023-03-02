@@ -46,6 +46,7 @@ export default function Locations ({loading}) {
 
   
   useEffect(() => {
+    window.scroll(0, 0)
     getData(1)
   }, [])
 

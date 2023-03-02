@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import background from '../../assets/images/banner-1.png'
 import style from './Home.module.css'
 
 export default function Home({ links }) {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  }, []);
 
   return (
     <div className={style['home-container']} style={{backgroundImage:`url(${background})`}}>
