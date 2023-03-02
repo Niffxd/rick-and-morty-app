@@ -1,0 +1,27 @@
+.container {
+  width: 100vw;
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.container h1 {
+  align-self: start;
+  margin-bottom: 1rem;
+}
+
+.container p {
+  margin-bottom: 1rem;
+}
+
+.details-info {
+  width: 100%;
+  padding: 1rem;
+}
+
+.details-info p {
+  margin: .4rem 0;
+}

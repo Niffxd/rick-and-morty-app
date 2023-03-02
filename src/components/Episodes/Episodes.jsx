@@ -79,19 +79,6 @@ export default function Episodes ({loading}) {
                 )
               })
             }
-            <div className={style['pages']}>
-              {
-                page > 1
-                ? <button onClick={() => handlerNavigation(page-1)}>{'<'}</button>
-                : ''
-              }
-              <button className={style['seasons']}>Season {page}</button>
-              {
-                page < seasons.length
-                ? <button onClick={() => handlerNavigation(page+1)}>{'>'}</button>
-                : ''
-              }
-            </div>
           </ul>
         : loader
       }

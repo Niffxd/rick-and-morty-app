@@ -3,6 +3,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
 import Characters from './components/Characters/Characters'
+import Details from './components/Details/Details'
 import Locations from './components/Locations/Locations'
 import Episodes from './components/Episodes/Episodes'
 import About from './components/About/About'
@@ -39,8 +40,8 @@ function App() {
       <Navbar links={links}/>
       <Routes>
         <Route exact path='/' element={<Home links={links} />}/>
-        <Route exact path='/characters' element={<Characters loading={loading}/>} />
-        {/* <Route exact path='/characters/:id' element={<Details />}/> */}
+        <Route exact path='/characters' element={<Characters loading={loading}/>}/>
+        <Route exact path='/characters/:id' element={<Details loading={loading}/>}/>
         <Route exact path='/locations' element={<Locations loading={loading}/>}/>
         <Route exact path='/episodes' element={<Episodes loading={loading}/>}/>
         <Route exact path='/about-me' element={<NotFound loading={loading}/>}/>

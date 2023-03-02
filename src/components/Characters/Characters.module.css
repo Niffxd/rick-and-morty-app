@@ -21,10 +21,11 @@
   list-style: none;
 }
 
-.characters-list > li {
+.characters-list > a {
   width: calc(50% - .6rem);
   margin: .5rem .3rem;
   border-radius: .5rem;
+  text-decoration: none;
   background-color: #000;
   cursor: pointer;
 }

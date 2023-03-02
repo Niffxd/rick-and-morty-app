@@ -51,22 +51,24 @@ export default function Characters ({loading}) {
             {
               characters.results?.map(character => {
                 return (
-                  <li key={character.id}>
-                    <img src={character.image} alt="character" width={'100%'}/>
-                    <div className={style['info-character-container']}>
-                      <div className={style['info-container']}>
-                        <h3>Name: {character.name}</h3>
-                        {
-                          character.status === 'Alive'
-                          ? <p>Status: 🟢 - {character.status}</p>
-                          : <p>Status: 🔴 - {character.status}</p>
-                        }
-                        <p>Gender: {character.gender}</p>
-                        <p>From: {character.origin.name}</p>
+                  <Link key={character.id} to={`/characters/${character.id}`}>
+                    <li>
+                      <img src={character.image} alt="character" width={'100%'}/>
+                      <div className={style['info-character-container']}>
+                        <div className={style['info-container']}>
+                          <h3>Name: {character.name}</h3>
+                          {
+                            character.status === 'Alive'
+                            ? <p><b>Status:</b> 🟢 - {character.status}</p>
+                            : <p><b>Status:</b> 🔴 - {character.status}</p>
+                          }
+                          <p><b>Gender:</b> {character.gender}</p>
+                          <p><b>From:</b> {character.origin.name}</p>
+                        </div>
+                        <p style={{ textDecoration: 'underline' }}>More info</p>
                       </div>
-                      <p><Link to={`/character/${character.id}`}>More info</Link></p>
-                    </div>
-                  </li>
+                    </li>
+                  </Link>
                 )
               })
             }

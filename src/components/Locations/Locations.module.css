@@ -26,7 +26,6 @@
   margin: .5rem .3rem;
   border-radius: .5rem;
   background-color: #000;
-  cursor: pointer;
 }
 
 .locations-list li > img {
@@ -35,7 +34,7 @@
 
 .info-location-container {
   width: 100%;
-  height: 7rem;
+  height: 11rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -67,4 +66,67 @@
   border-radius: .5rem;
   background-color: #000;
   cursor: pointer;
+}
+
+.showModal {
+  min-width: 80vw;
+  height: 80vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  margin: auto;
+  gap: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.showModal::backdrop {
+  background-color: #212121;
+}
+
+.showModal button {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  background-color: #212121;
+}
+
+.title-location {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.residents-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.residents-list::-webkit-scrollbar {
+  display: none;
+}
+
+.residents-list a {
+  margin: .5rem .3rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.residents-list p {
+  font-size: 1rem;
+}
+
+.residents-list li > img {
+  width: calc(70vw - .6rem);
 }
