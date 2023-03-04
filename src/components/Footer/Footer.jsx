@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import background from '../../assets/images/footer.png'
+import background from '../../assets/images/bg-footer.png'
+import portal from '../../assets/images/footer.png'
 import style from './Footer.module.css'
 
 export default function Footer () {
@@ -22,7 +23,7 @@ export default function Footer () {
   ]
 
   return(
-    <footer className={style['footer']} style={{backgroundImage:`url(${background})`}}>
+    <footer className={style['footer']} style={{background:`url(${background})`}}>
       <div className={style['title-footer']}>
         <h1>Wubba lubba dub dub</h1>
         <p>Follow me for more!</p>
@@ -38,6 +39,7 @@ export default function Footer () {
           }
         </div>
       </div>
+      <div className={style['portal-image']} style={{backgroundImage:`url(${portal})`}}></div>
     </footer>
   )
 }

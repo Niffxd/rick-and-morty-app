@@ -6,8 +6,6 @@
   position: relative;
   padding: 0 1.5rem;
   margin: 1rem;
-  box-shadow: 2px 2px .5rem #212121, -2px 2px .5rem #212121,
-              2px -2px .5rem #212121, -2px -2px .5rem #212121;
   border-radius: 2rem;
   color: #212121;
   background-color: #d3fdc7;
@@ -104,5 +102,33 @@
 
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    background-color: transparent;
+  }
+
+  .menu-container {
+    display: none;
+  }
+
+  .links-container {
+    display: flex;
+    list-style: none;
+  }
+
+  .link > li {
+  color: #d3fdc7;
+  }
+
+  .show-menu-links {
+    flex-direction: row;
+    position: initial;
+    padding: 0;
+    background-color: transparent;
+    animation: none;
+    justify-content: flex-end;
   }
 }

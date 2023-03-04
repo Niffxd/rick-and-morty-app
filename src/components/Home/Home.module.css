@@ -32,3 +32,53 @@
   background-color: #212121;
   cursor: pointer;
 }
+
+@media (min-width: 768px) {
+  .home-container {
+    height: calc(100vh - 5.5rem);
+    padding: 1rem 3rem 7rem;
+    background-size: 200% auto;
+    background-position-y: center;
+  }
+  
+    .title-app {
+      width: 60vw;
+      font-size: 1.5rem;
+    }
+
+  .title-app > h1 {
+    font-size: 3rem;
+  }
+
+  .navigation-container{
+    max-width: 50rem;
+    width: 50vw;
+    gap: 1rem;
+  }
+
+  .navigation-container > a {
+    min-width: 10rem;
+    max-width: 20rem;
+    width: 40%;
+  }
+
+  .navigation-button {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-container {
+    padding: 1rem 3rem 3rem;
+    background-position-y: 60%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navigation-button {
+    width: 100%;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+}
