@@ -100,7 +100,7 @@ export default function Locations ({loading}) {
                           <button
                             id={`exitModal-${location.id}`}
                             onClick={() => handlerExitModal(location.id)}
-                            >Salir
+                            >Back
                           </button>
                         </div>
                         {

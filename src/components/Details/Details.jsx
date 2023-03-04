@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import style from './Details.module.css'
 
 export default function Characters ({loading}) {
-  const { id } = useParams();
+  const { id } = useParams()
+  const navigate = useNavigate()
 
   const [ character, setCharacter ] = useState({})
   const [ loader, setLoader ] = useState(
@@ -29,6 +30,7 @@ export default function Characters ({loading}) {
   return Object.keys(character).length > 1
     ? (
         <div className={style['container']}>
+          <button className={style['button-back']} onClick={() => navigate(-1)}>Back</button>
           <h1>{character.name}:</h1>
           <img src={character.image} alt="char-profile" />
           <div className={style['details-info']}>

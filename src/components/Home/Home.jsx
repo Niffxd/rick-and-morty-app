@@ -17,14 +17,12 @@ export default function Home({ links }) {
       </div>
       <ul className={style['navigation-container']}>
         {
-          links.map(({ to, title }) => {
-            return title !== 'Home'
-            ? (
-                <Link key={title} to={to}>
-                  <button className={style['navigation-button']}>{title}</button>
-                </Link>
-              )
-            : ''
+          links.filter(({ title }) => title !== 'Home').map(({ to, title }) => {
+            return (
+              <Link key={title} to={to}>
+                <button className={style['navigation-button']}>{title}</button>
+              </Link>
+            )
           })
         }
       </ul>

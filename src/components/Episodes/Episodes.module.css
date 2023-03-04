@@ -73,3 +73,66 @@
 .seasons {
   width: 7rem !important;
 }
+
+.showModal {
+  min-width: 80vw;
+  height: 80vh;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+  margin: auto;
+  gap: 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.showModal::backdrop {
+  background-color: #212121;
+}
+
+.showModal button {
+  cursor: pointer;
+  padding: .5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: .5rem;
+  background-color: #212121;
+}
+
+.title-episode {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cast-list {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.cast-list::-webkit-scrollbar {
+  display: none;
+}
+
+.cast-list a {
+  margin: .5rem .3rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cast-list p {
+  font-size: 1rem;
+}
+
+.cast-list li > img {
+  width: calc(70vw - .6rem);
+}
