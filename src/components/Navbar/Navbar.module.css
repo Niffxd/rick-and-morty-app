@@ -108,6 +108,7 @@
 @media (min-width: 768px) {
   .navbar {
     background-color: transparent;
+    padding: 0;
   }
 
   .menu-container {
@@ -130,5 +131,13 @@
     background-color: transparent;
     animation: none;
     justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    margin: 1rem 0;
+    padding: 0 0 0 3rem;
+    z-index: 0;
   }
 }

@@ -1,6 +1,5 @@
 .home-container {
-  width: 100vw;
-  height: 100vh;
+  min-height: 30rem;
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -35,16 +34,15 @@
 
 @media (min-width: 768px) {
   .home-container {
-    height: calc(100vh - 5.5rem);
-    padding: 1rem 3rem 7rem;
+    padding: 1rem 3rem 5rem;
     background-size: 200% auto;
     background-position-y: center;
   }
   
-    .title-app {
-      width: 60vw;
-      font-size: 1.5rem;
-    }
+  .title-app {
+    width: 60vw;
+    font-size: 1.5rem;
+  }
 
   .title-app > h1 {
     font-size: 3rem;
@@ -70,7 +68,7 @@
 
 @media (min-width: 1024px) {
   .home-container {
-    padding: 1rem 3rem 3rem;
+    min-height: calc(100vh - 6rem);
     background-position-y: 60%;
   }
 }

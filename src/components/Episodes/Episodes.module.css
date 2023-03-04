@@ -1,6 +1,4 @@
 .container {
-  width: 100vw;
-  min-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,9 +14,8 @@
 .seasons-list {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -28,10 +25,6 @@
   border-radius: .5rem;
   background-color: #000;
   cursor: pointer;
-}
-
-.seasons-list li > img {
-  border-radius: .5rem .5rem 0 0;
 }
 
 .info-seasons-container {
@@ -77,6 +70,7 @@
 .showModal {
   min-width: 80vw;
   height: 80vh;
+  max-height: 35rem;
   display: flex !important;
   flex-direction: column;
   justify-content: flex-start;
@@ -134,5 +128,31 @@
 }
 
 .cast-list li > img {
-  width: calc(70vw - .6rem);
+  height: calc(50vh - .6rem);
+  max-height: 22rem;
+}
+
+@media (min-width: 768px) {
+  .seasons-list > li {
+    width: calc(50% - .6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .seasons-list > li {
+    width: calc(20% - .6rem);
+  }
+
+  .cast-list::-webkit-scrollbar {
+    display: block;
+    height: 10px;
+    background-color: #212121;
+    border-radius: 1rem;
+  }
+
+  .cast-list::-webkit-scrollbar-thumb {
+    border: 1px solid #d3fdc7;
+    background-color: #000;
+    border-radius: 1rem;
+  }
 }

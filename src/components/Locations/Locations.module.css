@@ -1,6 +1,4 @@
 .container {
-  width: 100vw;
-  min-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,7 +13,6 @@
 
 .locations-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
@@ -71,6 +68,7 @@
 .showModal {
   min-width: 80vw;
   height: 80vh;
+  max-height: 35rem;
   display: flex !important;
   flex-direction: column;
   justify-content: flex-start;
@@ -128,5 +126,37 @@
 }
 
 .residents-list li > img {
-  width: calc(70vw - .6rem);
+  height: calc(50vh - .6rem);
+  max-height: 22rem;
+}
+
+@media (min-width: 768px) {
+  .locations-list > li {
+    width: calc(25% - .6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .locations-list > li {
+    width: calc(20% - .6rem);
+  }
+
+  .residents-list::-webkit-scrollbar {
+    display: block;
+    height: 10px;
+    background-color: #212121;
+    border-radius: 1rem;
+  }
+
+  .residents-list::-webkit-scrollbar-thumb {
+    border: 1px solid #d3fdc7;
+    background-color: #000;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .residents-list > li {
+    width: calc(12.5% - .6rem);
+  }
 }

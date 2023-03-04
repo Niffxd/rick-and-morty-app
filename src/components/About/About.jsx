@@ -126,28 +126,30 @@ export default function About ({loading}) {
         <br />
         <p>If you want to talk, I'm here!</p>
       </div>
-      <form className={style['form-container']}>
-        <input type="text" name="name" placeholder="Name" value={form.name} onChange={handlerCheckName}/>
-        <p id='name' className={style['warning']}>* This field can't be empty *</p>
-        <input type="text" name="email" placeholder="Email" value={form.email} onChange={handlerCheckEmail}/>
-        <p id='email' className={style['warning']}>* This field can't be empty *</p>
-        <p id='emailCheck' className={style['warning']}>* Enter a valid email *</p>
-        <input type="text" name="message" placeholder="Message" value={form.message} onChange={handlerCheckMessage}/>
-        <p id='message' className={style['warning']}>* This field can't be empty *</p>
-        <button onClick={handlerEmailSend} disabled={sending}>{ sending ? 'Sending...' : 'Send'}</button>
-      </form>
-      <dialog id='failEmail'>
-        <div className={style['warning-fields']}>
-          <h2>{messageDialog}</h2>
-          <button
-            id='exitModal'
-            onClick={() => handlerExitModal()}
-            >Back
-          </button>
-        </div>
-      </dialog>
-      <p>Or</p>
-      <button onClick={handlerPCEmail}>Send from your email app</button>
+      <div className={style['form-container']}>
+        <form className={style['form']}>
+          <input type="text" name="name" placeholder="Name" value={form.name} onChange={handlerCheckName}/>
+          <p id='name' className={style['warning']}>* This field can't be empty *</p>
+          <input type="text" name="email" placeholder="Email" value={form.email} onChange={handlerCheckEmail}/>
+          <p id='email' className={style['warning']}>* This field can't be empty *</p>
+          <p id='emailCheck' className={style['warning']}>* Enter a valid email *</p>
+          <input type="text" name="message" placeholder="Message" value={form.message} onChange={handlerCheckMessage}/>
+          <p id='message' className={style['warning']}>* This field can't be empty *</p>
+          <button onClick={handlerEmailSend} disabled={sending}>{ sending ? 'Sending...' : 'Send'}</button>
+        </form>
+        <dialog id='failEmail'>
+          <div className={style['warning-fields']}>
+            <h2>{messageDialog}</h2>
+            <button
+              id='exitModal'
+              onClick={() => handlerExitModal()}
+              >Back
+            </button>
+          </div>
+        </dialog>
+        <p>Or</p>
+        <button onClick={handlerPCEmail}>Send from your email app</button>
+      </div>
     </div>
   )
 }

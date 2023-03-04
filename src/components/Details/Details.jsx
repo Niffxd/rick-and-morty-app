@@ -32,24 +32,27 @@ export default function Characters ({loading}) {
         <div className={style['container']}>
           <button className={style['button-back']} onClick={() => navigate(-1)}>Back</button>
           <h1>{character.name}:</h1>
-          <img src={character.image} alt="char-profile" />
-          <div className={style['details-info']}>
-            <p><b>Species:</b> {character.species}</p>
-            {
-              character.type?.length
-              ? <p><b>Type:</b> {character.type}</p>
-              : ''
-            }
-            {
-              character.status === 'Alive'
-              ? <p><b>Status:</b> 🟢 ({character.status})</p>
-              : <p><b>Status:</b> 🔴 ({character.status})</p>
-            }
-            <p><b>Origin:</b> {character.origin?.name}</p>
-            <p><b>Last location:</b> {character.location?.name}</p>
-            <p><b>Gender:</b> {character.gender}</p>
+          <div className={style['character-info']}>
+            <img src={character.image} alt="char-profile" />
+            <div className={style['details-info']}>
+              <p><b>Species:</b> {character.species}</p>
+              {
+                character.type?.length
+                ? <p><b>Type:</b> {character.type}</p>
+                : ''
+              }
+              {
+                character.status === 'Alive'
+                ? <p><b>Status:</b> 🟢 ({character.status})</p>
+                : <p><b>Status:</b> 🔴 ({character.status})</p>
+              }
+              <p><b>Origin:</b> {character.origin?.name}</p>
+              <p><b>Last location:</b> {character.location?.name}</p>
+              <p><b>Gender:</b> {character.gender}</p>
+              <br />
+              <p><b>Episodes:</b> {character.episode?.length}</p>
+            </div>
           </div>
-          <p><b>Episodes:</b> {character.episode?.length}</p>
         </div>
       )
     : (

@@ -1,6 +1,4 @@
 .container {
-  width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,10 +13,10 @@
 
 .characters-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+  margin: 0 auto;
 }
 
 .characters-list > a {
@@ -68,4 +66,22 @@
   border-radius: .5rem;
   background-color: #000;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .characters-list > a {
+    width: calc(25% - .6rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .characters-list > a {
+    width: calc(20% - .6rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .characters-list > a {
+    width: calc(12.5% - .6rem);
+  }
 }

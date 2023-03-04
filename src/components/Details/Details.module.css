@@ -1,6 +1,4 @@
 .container {
-  width: 100vw;
-  min-height: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,12 +8,7 @@
 
 .container h1 {
   align-self: start;
-  margin-bottom: 1rem;
-}
-
-.container > p {
-  font-size: 1.3rem;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 .button-back {
@@ -29,11 +22,53 @@
   align-self: baseline;
 }
 
+.character-info {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0 2rem;
+}
+
+.character-info > img {
+  border-radius: 1rem 1rem 0 0;
+}
+
 .details-info {
   width: 100%;
   padding: 1rem;
+  background-color: #000;
+  border-radius: 0 0 1rem 1rem;
 }
 
 .details-info p {
   margin: .4rem 0;
+}
+
+.details-info > p:last-child {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .character-info {
+    width: 80%;
+    flex-direction: row;
+    margin: 2rem 0 3rem;
+  }
+
+  .character-info > img {
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .details-info {
+    background-color: #000;
+    border-radius: 0 1rem 1rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-info {
+    margin: 2rem 0 5rem;
+  }
+
+
 }
